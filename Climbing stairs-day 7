@@ -1,0 +1,16 @@
+pulbic class Solution{
+public int climbingstairs(int n){
+int a=1;
+int b=2;
+if(n<=2){
+return n;
+}
+for(int i=3;i<n;i++){
+int ans=a+b;
+a=b;
+b=a;
+}
+return b;
+
+}
+}
