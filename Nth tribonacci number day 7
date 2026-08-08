@@ -1,0 +1,13 @@
+public class main{
+public int nth tribonacci(int n){
+int[] a=new int[n+1];
+a[0]=0;
+a[1]=[1];
+a[2]=1;
+for(int i=3;i<=n;i++){
+int ans=a[i-1]+a[i-2]+a[i-3];
+a[i]=ans;
+}
+return a[n];
+}
+}
