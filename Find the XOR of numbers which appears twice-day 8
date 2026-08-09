@@ -1,0 +1,22 @@
+class Solution {
+    public int duplicateNumbersXOR(int[] nums) {
+        int res=0;
+        HashMap<Integer,Integer> h=new HashMap<>();
+        for(int num:nums){
+            h.put(num,h.getOrDefault(num,0)+1);
+        }
+        for(int num:nums){
+            if(h.get(num)==2){
+                res=num^num;
+                return res;
+                
+            }
+            
+           
+        }
+        return 0;
+       
+
+        
+    }
+}
